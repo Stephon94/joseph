@@ -4,6 +4,11 @@ import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
 
+@app.route('/', methods=["GET"])
+def index():
+	print "We Work a little"
+	return "Hello World"
+
 @app.route('/getinterface', methods=["GET"])
 def get_interface():
 
